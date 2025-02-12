@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính diện tích và chu vi hình tròn</title>
+    <script>
+        function tinhDienTich() {
+            var radius = document.getElementById('radius').value;
+            if (radius && window.Android) {
+                var area = window.Android.tinhDienTich(parseFloat(radius));
+                document.getElementById('result').innerText = 'Diện tích: ' + area;
+            }
+        }
+
+        function tinhChuVi() {
+            var radius = document.getElementById('radius').value;
+            if (radius && window.Android) {
+                var perimeter = window.Android.tinhChuVi(parseFloat(radius));
+                document.getElementById('result').innerText = 'Chu vi: ' + perimeter;
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="info">
+    <label><strong>Họ và Tên:</strong> Đỗ Đình Đức</label><br>
+    <label><strong>MSSV:</strong>K215480106013</label><br>
+    <label><strong>Email:</strong>K215480106013@tnut.edu.vn </label><br>
+    <label><strong>Ngày sinh:</strong>13-08-2001 </label><br>
+    <label><strong>Địa chỉ:</strong>Định Hoá - Thái Nguyên </label>
+</div>
+<h2>Tính diện tích và chu vi hình tròn</h2>
+<label for="radius">Nhập bán kính:</label>
+<input type="number" id="radius" step="any">
+<br><br>
+<button onclick="tinhDienTich()">Tính Diện Tích</button>
+<button onclick="tinhChuVi()">Tính Chu Vi</button>
+<p id="result"></p>
+
+<img width="320" height="240" src="anh.jpg">
+
+<video width="320" height="240" controls>
+    <source src="mp4/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<iframe width="100%" height="315"
+        src="https://www.youtube.com/watch?v=H3zgVnegMAU"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+</iframe>
+</body>
+</html>
